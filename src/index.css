@@ -1,0 +1,84 @@
+:root {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  font-family: 'Lora', Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1e1e1e;
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.quote-poster {
+  max-width: 820px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  animation: fadeIn 1s ease-out;
+}
+
+.quote-text {
+  font-size: 2.5rem;
+  line-height: 1.45;
+  color: #f1f5f9;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.quote-text .italic {
+  font-style: italic;
+}
+
+.quote-author {
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  font-size: 1.25rem;
+  color: #4fd1c5; /* Teal/cyan matching the image */
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .quote-text {
+    font-size: 1.85rem;
+    line-height: 1.4;
+  }
+  
+  .quote-author {
+    font-size: 1.1rem;
+  }
+}
